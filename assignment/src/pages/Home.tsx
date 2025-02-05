@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Button, Typography, Paper } from "@mui/material";
-import { FaPlus, FaEdit, FaUser, FaChartBar } from "react-icons/fa"; // Updated to use FaPlus for Counter
+import { FaPlus, FaEdit, FaUser, FaChartBar } from "react-icons/fa";
 
 const Home: React.FC = () => {
   return (

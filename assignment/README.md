@@ -25,7 +25,12 @@
     Uses useState to manage editor content (EditorState). 
     Saves and loads data from localStorage.
 
-6. Dashboard.tsx
+6. SignIn.tsx
+    Implements mock Signin page  
+    After signing in,uses react-router-dom’s use navigate for navigation
+
+
+7. Dashboard.tsx
     Contains data visualization using react-chartjs-2 about user insights
 
 
