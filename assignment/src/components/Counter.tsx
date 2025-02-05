@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { Button, Typography, Box, Container } from "@mui/material";
-import { blue, indigo } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 import "../App.css"
 
 const Counter = () => {
