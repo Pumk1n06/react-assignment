@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Button, Typography, Container, Paper } from "@mui/material";
+import { Box, Button, Typography, Paper } from "@mui/material";
 import { FaPlus, FaEdit, FaUser, FaChartBar } from "react-icons/fa"; // Updated to use FaPlus for Counter
 
 const Home: React.FC = () => {
