@@ -22,7 +22,7 @@ const Counter = () => {
   }, [count]);
 
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -32,7 +32,7 @@ const Counter = () => {
         backgroundColor: "#f9f9f9",
         minHeight: "100vh", // Ensures it takes up full height
         width: "100vw", // Full width
-        margin: 0, // RemRemove any default margin
+        margin: 0, // Remove margin
       }}
     >
       <animated.div
@@ -74,7 +74,7 @@ const Counter = () => {
           </Button>
         </Box>
       </animated.div>
-    </Container>
+    </Box>
   );
 };
 

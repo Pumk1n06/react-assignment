@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# REPORT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Component Structure
+1. App.tsx (Root Component)
+    Manages routing using react-router-dom.
+    Defines routes for different pages (Home, Counter, UserDataForm, RichTextEditor, Dashboard).
 
-Currently, two official plugins are available:
+2. Home.tsx (Landing Page)
+    Serves as the main navigation hub.
+    Uses react-router-dom’s Link for navigation.
+    Utilizes Material UI (@mui/material) and react-icons for a visually appealing layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Counter.tsx
+    Implements a simple counter using React state (useState).
+    Uses react-spring for animations.
 
-## Expanding the ESLint configuration
+4. UserDataForm.tsx
+    Handles user input fields (Name, Address, Email, Phone).
+    Uses useState for managing form data.
+    Persists data in localStorage via useEffect.
+    Warns users about unsaved changes when they attempt to leave.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+5. RichTextEditor.tsx
+    Implements a rich text editor using react-draft-wysiwyg.
+    Uses useState to manage editor content (EditorState).
+    Saves and loads data from localStorage.
 
-- Configure the top-level `parserOptions` property like this:
+6. Dashboard.tsx
+    Contains data visualization using react-chartjs-2 about user insights
+    
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## STATE MANAGEMENT CHOICES
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. useState for Local Component State
+    Used in Counter.tsx to track the counter value.
+    Used in UserDataForm.tsx to track form data and detect unsaved changes.
+    Used in RichTextEditor.tsx to manage editor state (EditorState).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. useEffect for Side Effects
+    UserDataForm.tsx uses useEffect to:
+      Load saved form data from localStorage.
+      Save form data to localStorage when changes occur.
+      Warn users about unsaved changes before leaving the page.
+    RichTextEditor.tsx uses useEffect to initialize editor state from localStorage.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. localStorage for Persistence
+    UserDataForm.tsx and RichTextEditor.tsx store user input in localStorage, ensuring data persists across page reloads.

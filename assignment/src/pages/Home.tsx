@@ -5,7 +5,7 @@ import { FaPlus, FaEdit, FaUser, FaChartBar } from "react-icons/fa"; // Updated 
 
 const Home: React.FC = () => {
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -15,6 +15,7 @@ const Home: React.FC = () => {
         backgroundColor: "#eaf1ff", // Soft background color for better contrast
         minHeight: "100vh",
         width: "100vw",
+        margin : 0
       }}
     >
       {/* Heading with improved styling */}
@@ -146,7 +147,7 @@ const Home: React.FC = () => {
           Choose a section above to get started.
         </Typography>
       </Paper>
-    </Container>
+    </Box>
   );
 };
 

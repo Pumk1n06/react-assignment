@@ -57,7 +57,7 @@ const UserDataForm = () => {
   }, [isFormModified]);
 
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -131,7 +131,7 @@ const UserDataForm = () => {
           </Button>
         </Box>
       </Paper>
-    </Container>
+    </Box>
   );
 };
 
