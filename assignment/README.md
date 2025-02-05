@@ -1,5 +1,9 @@
 # REPORT
 
+## Sign In
+email - test@example.com
+password - password123
+
 ## Component Structure
 1. App.tsx (Root Component)
     Manages routing using react-router-dom. 
